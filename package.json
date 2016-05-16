@@ -1,0 +1,15 @@
+{
+    "name": "myProjectName",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-imagemin": "^1.0.0",
+        "grunt-contrib-less": "^1.3.0",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-include-replace": "^4.0.1",
+        "less-plugin-autoprefix": "^1.5.1"
+    }
+}
