@@ -11,6 +11,6 @@
     "gulp-include": "^2.2.1",
     "gulp-less": "latest",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "latest",
+    "gulp-uglify": "latest"
   }
 }
