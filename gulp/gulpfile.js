@@ -5,7 +5,6 @@ var gulp = require('gulp'),                      // Gulp JS
     include = require('gulp-include'),           // HTML Templates
     csso = require('gulp-csso'),                 // Minify CSS
     autoprefixer = require('gulp-autoprefixer'), // Gulp autoprefixer
-    connect = require('connect'),                // Webserver
     copy2 = require('gulp-copy2'),               // Copy files
     less = require('gulp-less'),                 // Less compiler
     path = require('path'),                      // Array of paths to be used for @import directives
