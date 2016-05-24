@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "latest",
+    "gulp-copy2": "latest",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-include": "^2.2.1",
+    "gulp-less": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "latest",
+  }
+}
