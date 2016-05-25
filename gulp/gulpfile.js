@@ -6,7 +6,8 @@ var gulp = require('gulp'),                      // Gulp JS
     csso = require('gulp-csso'),                 // Minify CSS
     autoprefixer = require('gulp-autoprefixer'), // Gulp autoprefixer
     copy2 = require('gulp-copy2'),               // Copy files
-    less = require('gulp-less'),                 // Less compiler
+    //less = require('gulp-less'),                 // Less compiler
+    //sass = require('gulp-sass'),                 // Sass compiler
     path = require('path'),                      // Array of paths to be used for @import directives
     rename = require("gulp-rename");             // Rename files
 
@@ -47,11 +48,13 @@ gulp.task('compressImages', () =>
         .pipe(gulp.dest('dist/img'))
 );
 /*---------------------------------------------------------------------------------*/
-/*-------------------------------- LESS TO CSS ------------------------------------*/
+/*----------------------------- CSS PREPROCESSORS ---------------------------------*/
 /*---------------------------------------------------------------------------------*/
-gulp.task('less', function() {
-    return gulp.src(['src/less/style.less', 'src/less/bootstrap.less'])
-        .pipe(less())
+gulp.task('cssPreprocessor', function() {
+    //return gulp.src(['src/less/style.less', 'src/less/bootstrap.less'])
+    //return gulp.src(['src/sass/style.scss', 'src/sass/bootstrap.sass'])
+        //.pipe(less())
+        //.pipe(sass())
         .pipe(autoprefixer({browsers: ['last 4 versions']}))
         .pipe(csso())
         .pipe(rename({suffix: ".min"}))
@@ -69,10 +72,10 @@ gulp.task("includes", function() {
 /*---------------------------------- DEFAULT --------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 gulp.task('default', function(){
-    gulp.run('copy', 'concatJs', 'compressJs', 'compressImages', 'less', 'includes');
+    gulp.run('copy', 'concatJs', 'compressJs', 'compressImages', 'cssPreprocessor', 'includes');
 
     // Watch
     gulp.watch("src/**/*", function(event){
-        gulp.run('copy', 'concatJs', 'compressJs', 'compressImages', 'less', 'includes');
+        gulp.run('copy', 'concatJs', 'compressJs', 'compressImages', 'cssPreprocessor', 'includes');
     });
 });
