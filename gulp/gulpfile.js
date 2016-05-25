@@ -16,8 +16,8 @@ var gulp = require('gulp'),                      // Gulp JS
 /*---------------------------------------------------------------------------------*/
 gulp.task('copy', function () {
     var paths = [
-        {src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/js/jquery.min.js'},
-        {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'dist/js/bootstrap.min.js'},
+        {src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/js/'},
+        {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'dist/js/'},
         {src: 'bower_components/bootstrap/dist/fonts/*.*', dest: 'dist/fonts/'}
     ];
     return copy2(paths);
