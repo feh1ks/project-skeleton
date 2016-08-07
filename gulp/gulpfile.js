@@ -19,6 +19,7 @@ gulp.task('copy', function () {
         {src: 'bower_components/jquery/dist/jquery.min.js', dest: 'dist/js/'},
         {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'dist/js/'},
         {src: 'bower_components/bootstrap/dist/fonts/*.*', dest: 'dist/fonts/'}
+		//{src: 'bower_components/fontawesome/fonts/*.*', dest: 'dist/fonts/'}
     ];
     return copy2(paths);
 });
@@ -26,7 +27,8 @@ gulp.task('copy', function () {
 /*------------------------------ -- CONCAT JS -------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 gulp.task('concatJs', function() {
-    return gulp.src(['bower_components/folder/pluginOneJS', 'bower_components/folder/pluginTwoJS'])
+    return gulp.src(['bower_components/folder/pluginOneJS',
+					 'bower_components/owl-carousel2/dist/owl.carousel.min.js'])
         .pipe(concat('plugins.js'))
         .pipe(gulp.dest('src/js/'));
 });
@@ -51,7 +53,9 @@ gulp.task('compressImages', () =>
 /*----------------------------- CSS PREPROCESSORS ---------------------------------*/
 /*---------------------------------------------------------------------------------*/
 gulp.task('cssPreprocessor', function() {
-    //return gulp.src(['src/less/style.less', 'src/less/bootstrap.less'])
+    //return gulp.src(['src/less/style.less',
+	//				 'src/less/bootstrap.less',
+	//				 'src/less/plugins.less'])
     //return gulp.src(['src/sass/style.scss', 'src/sass/bootstrap.sass'])
         //.pipe(less())
         //.pipe(sass())
